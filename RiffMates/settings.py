@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home', #register the home app created from running $python manage.py startapp home
+    'bands',
 ]
 
 MIDDLEWARE = [

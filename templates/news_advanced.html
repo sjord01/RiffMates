@@ -1,0 +1,28 @@
+<!-- RiffMates/templates/news_adv.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <title>RiffMates News</title>
+  <style>
+    /* Define CSS styles for list items */
+    .list-item-even {
+      background-color: #f2f2f2;
+    }
+    .list-item-odd {
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <h1>RiffMates News</h1>
+
+  <ul>
+    {% for item in news_data %}
+      <li class="{% cycle 'list-item-even' 'list-item-odd' %}">
+        <span>{{ item.0|date:"D d M Y" }}</span>
+        <span>{{ item.1 }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
